@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.estudosjava.course.entities.User;
 
-@RestController
-@RequestMapping(value = "/users")
+@RestController //indica que é o controller
+@RequestMapping(value = "/users") //mapeia
 public class UserResource {
 	
-	@GetMapping
+	@GetMapping //metodo mapeado
 	public ResponseEntity<User> findAll(){
 		User user = new User(1L, "Maria", "maria@gmail.com", "87999914185", "12345");
 		return ResponseEntity.ok().body(user);
